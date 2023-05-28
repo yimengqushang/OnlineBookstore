@@ -1,0 +1,252 @@
+/* 网页元素边距清零 */
+body,
+header,
+nav,
+ul,
+li,
+main,
+footer {
+	margin: 0;
+	list-style-type: none;
+}
+
+/* header头部宽960像素，高110像素，背景图片Images/banner.jpg，居中 */
+header {
+	width: 960px;
+	height: 110px;
+	background-image: url('../images/banner.jpg');
+	margin: 0px auto;
+}
+
+/* nav导航区宽960像素，高30像素，背景颜色为#D2E9FF，居中  */
+nav {
+	width: 960px;
+	height: 30px;
+	background-color: #D2E9FF;
+	margin: 0px auto;
+	text-align: right;
+}
+
+/* nav导航区的列表去掉默认的圆点标记 */
+nav ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+/* nav导航区的各列表项水平放置  */
+nav ul li {
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+}
+
+/* nav导航区的各链接去掉默认的下划线  */
+nav a {
+	display: block;
+	width: 100px;
+	text-decoration: none;
+}
+
+/* main内容区宽960像素，居中，银色细线边框  */
+main {
+	width: 960px;
+	margin: 0px auto;
+	text-align: center;
+	border: 1px solid silver;
+	padding-bottom: 40px;
+}
+
+/* footer页脚宽960像素，高60像素，背景图片Images/footer.jpg，居中  */
+footer {
+	width: 960px;
+	height: 60px;
+	background-image: url('../images/footer.jpg');
+	margin: 0px auto;
+	line-height: 60px;
+	text-align: center;
+	color: white;
+}
+
+.error {
+	color: red;
+}
+
+#welcome {
+
+	line-height: 30px;
+}
+
+a:link {
+	text-decoration: none;
+	color: blue;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+a:visited {
+	text-decoration: none;
+	/* color: darkorange; */
+}
+
+main {
+	position: relative;
+	width: 960px;
+	margin: 0px auto;
+	text-align: center;
+	border: 1px solid silver;
+	padding-bottom: 40px;
+}
+
+main ul.books {
+	list-style-type: none;
+	height: 160px;
+	width: 700px;
+	position: relative;
+}
+main .fenLei .books li {
+	list-style-type: none;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 45px;
+	float: left;
+}
+main .fenLei .books li span {
+	display: block;
+}
+main .fenLei .books li img {
+	width: 60px;
+	height: 100px;
+	border-radius: 5px;
+}
+.fenLei{
+	position: absolute;
+	width: 660px;
+	border-radius:0 0 5px 5px;
+	left: 99px;
+	top: -1px;
+	/* z-index:10; */
+	/* display: none; */
+	background-color: #fff;
+	opacity: 0.8;
+}
+
+/* 轮播图大小 */
+.lunBo #myCarousel img {
+	width: 960px;
+	height: 300px;
+}
+
+/* 电梯样式 */
+.elevator{
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	margin-left: 500px;
+	transform: all .5s;
+}
+.elevator li{
+	display: block;
+	border-radius: 5px;
+	width: 58px;
+	height: 60px;
+	color: #333;
+	font-size: 14px;
+	line-height: 19px;
+	padding: 11px 0 0;
+	margin: auto;
+	border-top: 1px solid #fff;
+	background-color: #ddd;
+	opacity: 0.7;
+}
+.elevator_fix{
+	position: fixed;
+	top: 140px;
+}
+
+/* 推荐书籍 */
+.tuijian_logo{
+	width: 900px;
+	height: 60px;
+	margin-left: 30px;
+	margin-top: 60px;
+	/* background-color: red; */
+}
+.tuijian_logo img{
+	display: block;
+	width: 150px;
+	height: 60px;
+}
+.tuiJian {
+	left: 60px;
+	width: 900px;
+	height: 300px;
+	/* margin-top: 40px; */
+	margin-left: 30px;
+	border-top: 2px solid greenyellow;
+	border-radius: 0 0 5px 5px;
+}
+
+.tuiJian img{
+	width: 150px;
+	height: 220px;
+	float: left;
+	padding: 5px;
+	margin-top: 40px;
+	margin-left: 53px;
+	margin-right: 12px;
+}
+.tuiJian_lb .pn a{
+	width: 40px;
+	height: 90px;
+	top: 105px;
+	margin-left: 30px;
+	margin-right: 30px;
+	background-color: #ddd;
+}
+
+/* 喜欢书籍*/
+.xihuan_logo{
+	width: 900px;
+	height: 62px;
+	margin-left: 30px;
+	margin-top: 60px;
+}
+.xihuan_logo img{
+	display: block;
+	width: 150px;
+	height: 60px;
+}
+.xihuan {
+	left: 60px;
+	width: 900px;
+	height: 700px;
+	/* margin-top: 20px; */
+	margin-left: 30px;
+	/* border: 1px solid #ddd; */
+	border-top: 2px solid greenyellow;
+	border-radius: 0 0 5px 5px;
+}
+.xihuan .xihuan_book li{
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 45px;
+	margin-bottom: 15px;
+}
+.xihuan .xihuan_book span{
+	display: block;
+	font-size: 12px;
+}
+.xihuan .xihuan_book img{
+	width: 110px;
+	height: 160px;
+}

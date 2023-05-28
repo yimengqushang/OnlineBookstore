@@ -1,0 +1,52 @@
+.media{
+	width: 900px;
+	margin-left: 30px;
+	margin-top: 40px;
+}
+.media_zt{
+	border-top: 2px solid #ddd;
+	width: 900px;
+	float: left;
+	margin-bottom: 20px;
+}
+.media img{
+	width: 110px;
+	height: 140px;
+}
+.media .img{
+	float: left;
+	width: 200px;
+	margin: 10px;
+	padding: 10px;
+}
+.media .jianJie{
+	float: left;
+	width: 500px;
+	/* height: 130px; */
+	margin: 10px;
+	line-height: 2.0;
+}
+.media .jianJie .p_jj{
+	font-size: 12px;
+	text-align: left;
+	text-indent: 2em;
+}
+.media .jianJie span{
+	font-size: 14px;
+	color: red;
+}
+.media .jianJie a{
+	font-size: 14px;
+}
+.media .jianJie b{
+	font-size: 16px;
+}
+.media .gwc{
+	float: left;
+	width: 140px;
+	height: 130px;
+	margin: 10px;
+}
+.media .gwc button{
+	margin-top: 45px;
+}
