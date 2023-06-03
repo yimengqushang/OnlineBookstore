@@ -13,22 +13,22 @@
 <?php include("HeaderNav.html");?>
 <body>
 	<div class="fenLei" style="display:none;">
-				<?php
-				require("Conn.php");
-				$result = $db->query("select * from category");
-				if($result->num_rows>0){
-				?>
-				<ul class="books">
-				<?php while($row=$result->fetch_assoc()){ ?>
-					<li><a href="products.php?CategoryId=<?=$row['CategoryId']?>"><img src="images/<?=$row['Image']?>" alt=""><span><?=$row['Name']?></span></a></li>
-				<?php
-				}
-				?>
-				</ul>	
-				<?php 
-				}
-				?>
-			</div>
+		<?php
+		require("Conn.php");
+		$result = $db->query("select * from category");
+		if($result->num_rows>0){
+		?>
+		<ul class="books">
+		<?php while($row=$result->fetch_assoc()){ ?>
+		<li><a href="products.php?CategoryId=<?=$row['CategoryId']?>"><img src="images/<?=$row['Image']?>" alt=""><span><?=$row['Name']?></span></a></li>
+		<?php
+		}
+		?>
+		</ul>	
+		<?php 
+		}
+		?>
+	</div>
 	<?php
 	$CategoryId=$_GET["CategoryId"];
 	session_start();

@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+header("Content-type:text/html;charset=utf-8");
+session_start();
+if(!isset($_SESSION['user'])){
+	echo "<script>alert('请先登录！');location='Login.php';</script>";
+	exit;
+}?>
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
@@ -8,9 +15,40 @@
 	<link href="css/bootstrap-4.6.0-dist/css/bootstrap.css" rel="stylesheet">
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="css/bootstrap-4.6.0-dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Style.css" />
 </head>
 <body>
-<?php include("HeaderNav.html");?>
+	<!-- 网页头部 -->
+	<header></header>
+	<!-- 导航区 -->
+	<nav>
+		<ul>
+			<li><a href="index.php">主 页</a></li>
+			<li id="fl"><a href="">分类</a></li>
+	        <li><a href="Search.php">搜索</a></li>
+			<li><a href="shoppingCart.php">购物车</a></li>
+			<li><a href="Register.php">用户注册</a></li>
+			<li><a href="UserProfile.php">用户信息</a></li>
+			<li><a href='Logout.php'>注销</a></li>
+			<li class="yh"><a href='Login.php'>用户登录</a></li>
+			<?php
+			if($_SESSION['user']){ 
+			?>
+				<script>
+					let yh = document.querySelector(".yh");
+					yh.setAttribute("style","display:none;");
+				</script>
+			<?php	
+			}
+			?>
+	</ul>
+	<span id='welcome'>
+	   <i><?=$_SESSION['user']?></i>&nbsp; 欢迎访问网上书城系统！
+	</span>
+	</nav>
+	<!-- 内容区的开始 -->
+	<main> 
+	
 	<div class="zt">		
 		<div class="content">
 			<div class="fenLei" style="display:none;">
@@ -64,7 +102,7 @@
 			</div>
 			
 			<!-- 楼层效果 -->
-			<div class="elevator">
+			<div class="elevator" οnmοuseοver="this.style.cursor='hand'">
 					<li data-n="rm">热门<br />书籍</li>
 					<li data-n="xh">猜你<br />喜欢</li>
 					<li data-n="db">返回<br />顶部</li>
@@ -131,7 +169,7 @@
 				?>
 				<ul class="xihuan_book">
 				<?php while($row=$result->fetch_assoc()){ ?>
-					<li><a href="bookPage.php"><img src="images/<?=$row['Image']?>" alt=""><span><?=$row['Name']?></span></a></li>
+					<li><a href="bookPage.php?name=<?=$row['Name']?>"><img src="images/<?=$row['Image']?>" alt=""><span><?=$row['Name']?></span></a></li>
 				<?php
 				}
 				?>

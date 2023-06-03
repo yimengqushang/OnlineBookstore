@@ -48,7 +48,19 @@ nav a {
 	width: 100px;
 	text-decoration: none;
 }
-
+span>i{
+	font-size: 18px;
+	color:red;
+}
+@font-face {
+		font-family: "MyNewFont";
+		src: url("../font/YeZiGongChangZuiHanJiangXingCao-2.ttf");
+		}
+span>em{
+	font-family: MyNewFont;
+	font-size: 18px;
+	color: darkturquoise;
+}
 /* main内容区宽960像素，居中，银色细线边框  */
 main {
 	width: 960px;

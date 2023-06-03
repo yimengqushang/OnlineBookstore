@@ -11,6 +11,23 @@
 </head>
 <body>
 <?php include("HeaderNav.html");?>
+	<div class="fenLei" style="display:none;">
+		<?php
+		require("Conn.php");
+		$result = $db->query("select * from category");
+		if($result->num_rows>0){
+		?>
+		<ul class="books">
+		<?php while($row=$result->fetch_assoc()){ ?>
+			<li><a href="products.php?CategoryId=<?=$row['CategoryId']?>"><img src="images/<?=$row['Image']?>" alt=""><span><?=$row['Name']?></span></a></li>
+		<?php
+		}
+		?>
+		</ul>	
+		<?php 
+		}
+		?>
+	</div>
 	<?php
 		$name = $_GET["name"];
 		require("Conn.php");
@@ -31,13 +48,18 @@
 					<?=$row['Descn']?>
 				</p>
 				<div class="gwc">
-					<a class="gwc_sum">hh </a>
 					<button class="btn btn-danger">加入购物车</button>
 				</div>
 			</div>
 			<div class="bookContent">
 				<span>
-					<?=$row['firstName']?>
+					<?php
+					if(isset($row['firstName'])){
+					?>
+						<?=$row['firstName']?><a>节选</a>
+					<?php
+					} 
+					?>
 				</span>
 				<p>
 					<?php
@@ -62,5 +84,6 @@
 	}
 	?>
 </body>
+<script src="js/index.js"></script>
 <?php include("Footer.html"); ?>	
 </html>
